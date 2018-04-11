@@ -1,13 +1,10 @@
 import numpy as np
 import pandas as pd
 
-#base = open("../base/segmentation.test", "r")
 
-base = pd.read_csv('../base/segmentation.test')
+base = np.genfromtxt('segmentation.data.txt',delimiter=',', dtype=np.str)
 
-#print(base.readlines())
 
-labels = base.loc[:]['CLASSE']
-
-print(labels)
+labels = base[1:,0]
+data = base[1:,1:]
 
